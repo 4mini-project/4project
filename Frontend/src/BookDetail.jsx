@@ -8,6 +8,14 @@ function BookDetail() {
     navigate(`/books/delete`)
   }
 
+  const handleEditClick = () => {
+    navigate(`/books`)
+  }
+
+  const handleCreateCoverClick = () => {
+    navigate(`/books`)
+  }
+
   return (
     <>
       <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
@@ -17,7 +25,7 @@ function BookDetail() {
         onload="this.rel='stylesheet'"
         href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
       />
-      <title>Stitch Design</title>
+      <title>Book Detail</title>
       <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
       <div
         className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
@@ -159,10 +167,12 @@ function BookDetail() {
               </div>
               <div className="flex justify-stretch">
                 <div className="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
-                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]">
+                  <button onClick={handleEditClick}
+                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Edit</span>
                   </button>
-                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]">
+                  <button onClick={handleCreateCoverClick}
+                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Create Cover</span>
                   </button>
                   <button onClick={handleDeleteClick} 
