@@ -165,7 +165,8 @@ export const GeneratedCoverImage = styled(Box)({ // Used in AddBookPage
   maxWidth: '400px',
   borderRadius: '12px',
   border: '1px solid #dbe0e6',
-  height: 'auto', // More flexible than fixed height
+  height: 'auto',    // Auto height for aspect ratio
+  aspectRatio: '9/6', // More flexible than fixed height
   objectFit: 'cover',
 });
 
@@ -370,7 +371,7 @@ export const CoverImage = styled(Box)({ // General purpose cover image
   width: '100%',
   maxWidth: '400px', // Max width constraint
   height: 'auto',    // Auto height for aspect ratio
-  aspectRatio: '16 / 9', // Common aspect ratio, can be overridden by sx if needed for specific cases
+  aspectRatio: '9/6', // Common aspect ratio, can be overridden by sx if needed for specific cases
   borderRadius: '12px',
   border: '1px solid #dbe0e6',
   objectFit: 'cover',
@@ -524,7 +525,7 @@ export const DetailImageTextContainer = styled(Box)(({ theme }) => ({
 
 export const DetailBookCoverImage = styled(Box)(({ theme }) => ({ // component="img" will be applied on use
     width: '100%',
-    aspectRatio: '16 / 9',
+    aspectRatio: '9 / 6',
     objectFit: 'cover',
     borderRadius: '12px', // Already on DetailImageTextContainer, but can be here too for the img itself
     display: 'block',

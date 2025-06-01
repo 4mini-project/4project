@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import AddBookPage from './pages/AddBookPage';
 import Detail_Book from './pages/Detail_Book';
 import Update_Book from './pages/Update_Book';
-import List_Book from './pages/List_Book';
+import View_Book from './pages/View_Book';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         
         {/* 책 목록 페이지 */}
-        <Route path="/books" element={<List_Book />} />
+        <Route path="/books" element={<View_Book />} />
         
         {/* 책 추가 페이지 */}
         <Route path="/add-book" element={<AddBookPage />} />
